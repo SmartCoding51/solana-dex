@@ -1,0 +1,2 @@
+[workspace]
+members = ["swap-anchor/", "swap-client/", "swap-math/"]

@@ -1,0 +1,42 @@
+.screen-root {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
+.app-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 150px minmax(380px, auto) 200px;
+  gap: 1em 0;
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+}
+
+.app-body-top {
+  grid-row: 1;
+}
+
+.app-body-mid {
+  grid-row: 2;
+  overflow-y: scroll;
+}
+
+.app-body-bottom {
+  grid-row: 3;
+}
+
+.panel {
+  border: var(--panel-border);
+  border-radius: var(--panel-border-radius);
+  padding: var(--panel-padding);
+}
+
+@media screen and (orientation: portrait) and (max-width: 375px) {
+  .app-body {
+    grid-template-rows: 130px minmax(380px, auto) 200px;
+  }
+  .app-body-mid {
+    max-width: 360px;
+  }
+}
